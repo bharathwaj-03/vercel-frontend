@@ -1,6 +1,6 @@
 import React from 'react'; 
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
-import Registrations from './registrations'; 
+import Registrations from './Registrations'; 
 import Student from './Student'; 
 import Staff from "./Staff"; 
 import ForgotPass from './ForgotPass'; 
