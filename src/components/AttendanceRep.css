@@ -1,0 +1,173 @@
+.attendance-container{
+    display:flex;
+    height:100vh;
+   
+     background: white; 
+  
+   
+
+}
+.dash-cont{
+  flex-basis: 20%;
+  
+}
+.main-content4{
+
+ background:   #f1f1f1;
+
+
+    flex-basis:75%;
+    gap:10px;
+    margin-left:50px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  
+    color:black;
+
+    padding:30px;
+    overflow: hidden;
+    border-radius: 12px;
+    border-radius: 2px solid black;
+    width:50%;
+ 
+    box-shadow:inset 0 4px 12px rgba(0,0,0,0.5);
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* allows vertical scrolling */
+    max-height: 95vh;
+  
+    align-items: center;
+}
+.header{
+    display:flex;
+    flex-direction: column;
+   align-items: center; 
+   gap:10px;
+   margin-top: 6px;
+   margin-bottom: 10px;
+  
+   
+}
+
+
+
+.loading, .error, .no-data {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+  }
+  
+  .loading {
+    color: #004085;
+    background-color: #cce5ff;
+    border: 1px solid #b8daff;
+  }
+  
+  .error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+  }
+  
+  .no-data {
+    color: #856404;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+  }
+  
+  .retry-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .retry-btn:hover {
+    background-color: #0069d9;
+  }
+  
+  .student-name {
+    margin-top: 10px;
+    color: #585858;
+    font-weight: normal;
+  }
+  
+  .reports-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .report {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 10px);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .report:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .report-content {
+    padding: 20px;
+  }
+  
+  .report-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .report-row:last-child {
+    border-bottom: none;
+  }
+  
+  .label {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .value {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .percentage {
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+  
+  .status-good {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .status-warning {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .status-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  @media (max-width: 768px) {
+    .report {
+      width: 100%;
+    }
+  }

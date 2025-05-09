@@ -1,0 +1,220 @@
+.timetable-container{
+    display:flex;
+    height:100vh;
+
+    background-color: white;
+   
+
+}
+.dash-cont{
+  flex-basis: 20%;
+  
+}
+.main-content2{
+
+   background: #fff4e6;
+    flex-basis:75%;
+    gap:10px;
+    margin-left:10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+   /* flex:1; */
+    padding:30px;
+    border-radius: 12px;
+    width:75%;
+    height:88%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+.header{
+    display:flex;
+    flex-direction: column;
+   align-items: center; 
+   gap:10px;
+   margin-bottom: 0px;
+}
+.header h1,h3,h4{
+    margin:0px;
+
+}
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:25px;
+    margin-top: 20px;
+}
+.tt-section{
+    margin-top:5px;
+    padding:1rem;
+}
+.tt-section h5{
+    font-size: 1rem;
+    margin-bottom:1rem;
+    text-align:center;
+}
+.tt-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,0.5fr));
+    gap:0.5rem;
+    justify-content: center;
+}
+.tt-box {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  .tt-box:hover {
+    transform: scale(1.05);
+    cursor:pointer;
+  }
+
+  .date-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  
+  .current-date {
+    margin: 0 1rem;
+    min-width: 280px;
+    text-align: center;
+  }
+  
+  .slider-arrow {
+    background: #f0f0f0;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .slider-arrow:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .slider-arrow i {
+    font-size: 24px;
+  }
+
+
+ 
+
+.attendance-section {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.students-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.attendance-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.attendance-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-toggle {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.attendance-toggle input {
+  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+}
+
+.toggle-label {
+  font-weight: 500;
+  color: #555;
+}
+
+.submit-attendance-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-attendance-btn:hover {
+  background-color: #388e3c;
+}
+
+.no-students-message {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+.course-selector {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.course-selector label {
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.course-selector select {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Style for present/absent labels */
+.toggle-label {
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+input:checked + .toggle-label {
+  background-color: #4caf50;
+  color: white;
+}
+
+input:not(:checked) + .toggle-label {
+  background-color: #f44336;
+  color: white;
+}

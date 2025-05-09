@@ -1,0 +1,286 @@
+
+.calendar-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  
+  }
+  .dash-cont{
+    flex-basis: 20%;
+  }
+  .main-content{
+    flex-basis: 75%;
+    gap:10px;
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .calendar-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d3436;
+    margin: 0;
+  }
+  
+  .calendar-nav-btn {
+    background-color: #f0f2f5;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .calendar-nav-btn:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .calendar-nav-btn i {
+    font-size: 1.2rem;
+    color: #636e72;
+  }
+  
+  .today-btn {
+    background-color: #6c5ce7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.2s;
+  }
+  
+  .today-btn:hover {
+    background-color: #5b4ccc;
+  }
+  
+  .calendar-legend {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  
+  .calendar-weekday {
+    text-align: center;
+    font-weight: 600;
+    color: #636e72;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .calendar-day {
+    min-height: 100px;
+    border-radius: 8px;
+    background-color: #f0f2f5;
+    padding: 5px;
+    position: relative;
+  }
+  
+  .empty-day {
+    background-color: transparent;
+  }
+  
+  .day-number {
+    font-weight: 500;
+    padding: 3px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+  
+  .today .day-number {
+    background-color: #6c5ce7;
+    color: white;
+  }
+  
+  .calendar-events {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  
+  .calendar-event {
+    font-size: 0.75rem;
+    padding: 2px 4px;
+    border-radius: 3px;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+  
+  .holiday {
+    background-color: #ff7675;
+  }
+  
+  .academic {
+    background-color: #fdcb6e;
+  }
+  
+  .upcoming-events {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .upcoming-events h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #2d3436;
+  }
+  
+  .events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .event-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .event-date {
+    background-color: #f0f2f5;
+    border-radius: 5px;
+    padding: 8px;
+    text-align: center;
+    min-width: 60px;
+    font-weight: 500;
+  }
+  
+  .event-name {
+    padding: 8px 10px;
+    border-left: 4px solid;
+    background-color: #f0f2f5;
+    border-radius: 0 5px 5px 0;
+    flex-grow: 1;
+  }
+  
+  /* Make the calendar responsive */
+  @media (max-width: 768px) {
+    .calendar-day {
+      min-height: 70px;
+    }
+    
+    .calendar-event {
+      font-size: 0.7rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .calendar-grid {
+      gap: 2px;
+    }
+    
+    .calendar-day {
+      min-height: 60px;
+      padding: 2px;
+    }
+    
+    .day-number {
+      width: 20px;
+      height: 20px;
+      font-size: 0.8rem;
+    }
+    
+    .calendar-event {
+      padding: 1px 2px;
+      font-size: 0.6rem;
+    }
+  }
+
+  /* Add these styles to your AcademicCalendar.css file */
+
+.error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #fff3f3;
+  border: 1px solid #ffcccc;
+  border-radius: 5px;
+  color: #e74c3c;
+  text-align: center;
+}
+
+.retry-btn {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.retry-btn:hover {
+  background-color: #2980b9;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Make sure weekend days are visually distinct */
+.calendar-day.weekend {
+  background-color: #f8f8f8;
+}
+
+/* Improve visibility of events */
+.calendar-event {
+  margin-bottom: 2px;
+  font-size: 10px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

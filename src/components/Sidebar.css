@@ -1,0 +1,198 @@
+.sidebar {
+  width: 270px;
+  height: 100vh;
+  background-color: orange;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.university-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.university-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.profile-section {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 2px solid white;
+}
+
+.profile-details p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.sidebar-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  display: flex;
+  align-items: center;
+  padding: 10px 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.sidebar-menu li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.sidebar-menu li:hover {
+  background-color: darkorange;
+}
+
+.logout-btn {
+  margin-top: auto;
+  padding: 10px 15px;
+  background-color: white;
+  color: orange;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #ffddbb;
+}
+
+.link-no-decoration {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 160px;
+  z-index: 1100;
+  cursor: pointer;
+  background-color: orange;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-icon {
+  width: 24px;
+  height: 18px;
+  position: relative;
+}
+
+.hamburger-icon span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: all 0.25s ease-in-out;
+}
+
+.hamburger-icon span:nth-child(1) {
+  top: 0px;
+}
+
+.hamburger-icon span:nth-child(2) {
+  top: 8px;
+}
+
+.hamburger-icon span:nth-child(3) {
+  top: 16px;
+}
+
+/* Hamburger icon animation when open */
+.hamburger-icon.open span:nth-child(1) {
+  top: 8px;
+  transform: rotate(135deg);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.hamburger-icon.open span:nth-child(3) {
+  top: 8px;
+  transform: rotate(-135deg);
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  /* left: 0; */
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+
+@media screen and (max-width: 920px) {
+  .hamburger-menu {
+    display: flex;
+  }
+  
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .sidebar.active {
+    transform: translateX(0);
+  }
+}
